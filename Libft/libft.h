@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:43:18 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/17 17:27:04 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/17 17:40:58 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
+int	ft_isascii(int c);
 
 #endif

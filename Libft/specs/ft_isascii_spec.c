@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_spec.h                                       :+:      :+:    :+:   */
+/*   ft_isascii_spec.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/17 17:35:10 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 17:35:50 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/17 17:42:22 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_SPEC_H
-# define LIBFT_SPEC_H
+#include <assert.h>
+#include <ctype.h>
+#include "libft_spec.h"
 
-# include "../libft.h"
-
-void	ft_isalpha_spec(void);
-void	ft_isdigit_spec(void);
-void	ft_isalnum_spec(void);
-void	ft_isascii_spec(void);
-
-#endif
+void	ft_isascii_spec(void)
+{
+	assert(ft_isascii('a') == isascii('a'));
+	assert(ft_isascii('B') == isascii('B'));
+	assert(ft_isascii(233) == isascii(233));
+	assert(ft_isascii(-1) == isascii(-1));
+	assert(ft_isascii(',') == isascii(','));
+}
