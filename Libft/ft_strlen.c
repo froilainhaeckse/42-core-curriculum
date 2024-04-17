@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_spec.h                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/17 18:23:26 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/17 18:34:20 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_SPEC_H
-# define LIBFT_SPEC_H
+int	ft_strlen(char *str)
+{
+	int	i;
 
-# include "../libft.h"
-
-void	ft_isalpha_spec(void);
-void	ft_isdigit_spec(void);
-void	ft_isalnum_spec(void);
-void	ft_isascii_spec(void);
-void	ft_isprint_spec(void);
-void	ft_strlen_spec(void);
-
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}

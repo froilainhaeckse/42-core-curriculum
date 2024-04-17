@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_spec.h                                       :+:      :+:    :+:   */
+/*   ft_strlen_spec.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/17 18:23:26 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/17 18:36:06 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_SPEC_H
-# define LIBFT_SPEC_H
+#include <assert.h>
+#include <string.h>
+#include "libft_spec.h"
 
-# include "../libft.h"
-
-void	ft_isalpha_spec(void);
-void	ft_isdigit_spec(void);
-void	ft_isalnum_spec(void);
-void	ft_isascii_spec(void);
-void	ft_isprint_spec(void);
-void	ft_strlen_spec(void);
-
-#endif
+void	ft_strlen_spec(void)
+{
+	assert(ft_strlen("a") == strlen("a"));
+	assert(ft_strlen("abc") == strlen("abc"));
+	assert(ft_strlen(" ") == strlen(" "));
+	assert(ft_strlen("hello") == strlen("hello"));
+}
