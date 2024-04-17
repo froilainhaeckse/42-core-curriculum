@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isdigit_spec.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 13:43:18 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/17 16:47:33 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 16:43:56 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/17 16:59:28 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <assert.h>
+#include <ctype.h>
+#include "libft_spec.h"
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-
-#endif
+void	ft_isdigit_spec(void)
+{
+	assert(ft_isdigit('a') == isdigit('a'));
+	assert(ft_isdigit('B') == isdigit('B'));
+	assert(ft_isdigit('1') == isdigit('1'));
+	assert(ft_isdigit(',') == isdigit(','));
+}

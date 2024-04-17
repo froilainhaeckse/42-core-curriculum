@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/17 15:09:48 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/17 16:50:13 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 # include "../libft.h"
 
 void	ft_isalpha_spec(void);
+void	ft_isdigit_spec(void);
 
 #endif
