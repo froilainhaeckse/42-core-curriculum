@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tkupler <tkupler@student.42.fr>            +#+  +:+       +#+         #
+#    By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 12:41:53 by tkupler           #+#    #+#              #
-#    Updated: 2024/04/17 18:20:07 by tkupler          ###   ########.fr        #
+#    Updated: 2024/04/18 11:30:32 by tkupler          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ $(NAME): $(OBJ)
 
 $(TEST_EXEC): $(TEST_OBJ) $(NAME)
 	cc $(CFLAGS) -o $@ $^
+	./$(TEST_EXEC) | cat
 
 all: $(NAME)
 
@@ -43,6 +44,6 @@ fclean:
 clean_test: test fclean
 
 re:
-	flean all
+	fclean all
 
 .PHONY: all, clean, fclean, re, test, clean_test
