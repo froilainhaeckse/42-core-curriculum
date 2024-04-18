@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_memcpy_spec.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:29:34 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/18 12:41:56 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/18 13:45:53 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <assert.h>
+#include <string.h>
 #include "libft_spec.h"
 
-int	main(void)
+void	ft_memcpy_spec(void)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
+	char src[] = "Hello, world!";
+	char dest1[20];
+	char dest2[20];
 
-	return (0);
+	ft_memcpy(dest1, src, strlen(src) + 1);
+	memcpy(dest2, src, strlen(src) + 1);
+
+	size_t i = 0;
+	while (src[i]) {
+		assert(dest1[i] == dest2[i]);
+		assert(dest1[i] == src[i]);
+		i++;
+	}
+	printf("ft_memcpy test passed!\n");
 }

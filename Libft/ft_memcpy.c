@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:29:34 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/18 12:17:38 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/18 13:43:57 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_spec.h"
+#include "libft.h"
 
-int	main(void)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
+	char	*d;
+	const char *s;
+	size_t i;
 
-	return (0);
+	i = 0;
+	s = src;
+	d = dest;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+
+	return dest;
 }

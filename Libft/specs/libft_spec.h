@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 11:54:50 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 13:46:21 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void	ft_isprint_spec(void);
 void	ft_strlen_spec(void);
 void	ft_memset_spec(void);
 void	ft_bzero_spec(void);
+void	ft_memcpy_spec(void);
 
 #endif
