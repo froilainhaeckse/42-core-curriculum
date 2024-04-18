@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <string.h>
 #include "libft_spec.h"
 
 void	ft_strlen_spec(void)

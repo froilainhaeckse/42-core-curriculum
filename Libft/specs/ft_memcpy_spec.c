@@ -6,12 +6,10 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:41:56 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:45:53 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 15:10:50 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <string.h>
 #include "libft_spec.h"
 
 void	ft_memcpy_spec(void)

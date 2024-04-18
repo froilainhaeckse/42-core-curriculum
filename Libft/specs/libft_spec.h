@@ -15,6 +15,9 @@
 
 # include "../libft.h"
 # include "stdio.h"
+# include "assert.h"
+# include "ctype.h"
+# include "string.h"
 
 void	ft_isalpha_spec(void);
 void	ft_isdigit_spec(void);

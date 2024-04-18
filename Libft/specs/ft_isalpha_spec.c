@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <ctype.h>
 #include "libft_spec.h"
 
 void	ft_isalpha_spec(void)

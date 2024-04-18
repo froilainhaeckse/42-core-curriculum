@@ -6,12 +6,10 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:19:12 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:44:27 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 15:11:24 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include <string.h>
 #include "libft_spec.h"
 
 void	ft_bzero_spec(void)
