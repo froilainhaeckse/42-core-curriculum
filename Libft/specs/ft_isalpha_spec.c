@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:34:38 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:45:02 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 15:36:13 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 void	ft_isalpha_spec(void)
 {
-	assert(ft_isalpha('a') == isalpha('a'));
-	assert(ft_isalpha('B') == isalpha('B'));
-	assert(ft_isalpha('1') == isalpha('1'));
-	assert(ft_isalpha(',') == isalpha(','));
+	assert(ft_isalpha('a') != 0);
+    assert(ft_isalpha('B') != 0);
+    assert(ft_isalpha('z') != 0);
+    assert(ft_isalpha('A') != 0);
+    assert(ft_isalpha('1') == 0);
+    assert(ft_isalpha(',') == 0);
+    assert(ft_isalpha(' ') == 0);
+    assert(ft_isalpha('\n') == 0);
 	printf("ft_isalpha test passed!\n");
 }

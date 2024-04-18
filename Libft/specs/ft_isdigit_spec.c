@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:43:56 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:45:33 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 15:38:45 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 
 void	ft_isdigit_spec(void)
 {
-	assert(ft_isdigit('a') == isdigit('a'));
-	assert(ft_isdigit('B') == isdigit('B'));
-	assert(ft_isdigit('1') == isdigit('1'));
-	assert(ft_isdigit(',') == isdigit(','));
+	assert(ft_isdigit('0') != 0);
+    assert(ft_isdigit('2') != 0);
+    assert(ft_isdigit('4') != 0);
+    assert(ft_isdigit('9') != 0);
+    assert(ft_isdigit('c') == 0);
+    assert(ft_isdigit(',') == 0);
+    assert(ft_isdigit(' ') == 0);
+    assert(ft_isdigit('\n') == 0);
 	printf("ft_isdigit test passed!\n");
 }
