@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 16:03:34 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/18 16:01:22 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/18 21:57:44 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_spec.h"
+#include "libft.h"
 
-int	main(void)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
-	ft_memmove_spec();
+	size_t			i;
+	int				j;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	return (0);
+	i = 0;
+	j = 1;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	if (dest == src)
+		return (dest);
+	if (dest > src)
+	{
+		j = -1;
+		d += n - 1;
+		s += n - 1;
+	}
+	while (i < n)
+	{
+		*d = *s;
+		d += j;
+		s += j;
+		i++;
+	}
+	return (dest);
 }
