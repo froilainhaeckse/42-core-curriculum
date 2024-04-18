@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 17:48:23 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 11:25:39 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 13:45:49 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void	ft_isprint_spec(void)
 	assert(ft_isprint(',') == isprint(','));
 	assert(ft_isprint(' ') == isprint(' '));
 	assert(ft_isprint(233) == isprint(233));
+	printf("ft_isprint test passed!\n");
 }

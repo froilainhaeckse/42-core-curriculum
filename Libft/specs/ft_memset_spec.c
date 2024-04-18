@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 11:39:40 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 11:54:58 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 13:46:06 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	ft_memset_spec(void)
 
 	assert(ft_memset(str, 'A', 5) == memset(str, 'A', 5));
 	assert(ft_memset(str, 'A', 0) == memset(str, 'A', 0));
+	printf("ft_memset test passed!\n");
 }
