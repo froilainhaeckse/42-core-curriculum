@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 22:28:04 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/18 22:27:19 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/18 23:31:56 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_spec.h"
+#include "libft.h"
 
-int	main(void)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
-	ft_memmove_spec();
-	ft_strlcpy_spec();
+	size_t		i;
+	size_t		src_len;
 
-
-	return (0);
+	src_len = 0;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (dstsize == 0)
+		return (src_len);
+	i = 0;
+	while (src[i] != '\0' && i < dstsize - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (src_len);
 }
