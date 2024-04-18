@@ -21,5 +21,6 @@ int	main(void)
 	ft_isprint_spec();
 	ft_strlen_spec();
 	ft_memset_spec();
+	ft_bzero_spec();
 	return (0);
 }

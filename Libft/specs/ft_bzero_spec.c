@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero_spec.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 13:43:18 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 11:57:56 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/18 12:19:12 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/18 13:44:27 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <assert.h>
+#include <string.h>
+#include "libft_spec.h"
 
-# include <unistd.h>
+void	ft_bzero_spec(void)
+{
+	char	str_ft[10];
+	char	str_libc[10];
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_strlen(char *str);
-void	*ft_memset(void *s, int c, size_t len);
-void	ft_bzero(void *s, size_t len);
-
-#endif
+	ft_bzero(str_ft, 5);
+	bzero(str_libc, 5);
+	for (int i = 0; i < 5; i++)
+	{
+		assert(str_ft[i] == 0);
+		assert(str_libc[i] == 0);
+	}
+	printf("ft_bzero test passed!\n");
+}

@@ -14,6 +14,7 @@
 # define LIBFT_SPEC_H
 
 # include "../libft.h"
+# include "stdio.h"
 
 void	ft_isalpha_spec(void);
 void	ft_isdigit_spec(void);
@@ -22,5 +23,6 @@ void	ft_isascii_spec(void);
 void	ft_isprint_spec(void);
 void	ft_strlen_spec(void);
 void	ft_memset_spec(void);
+void	ft_bzero_spec(void);
 
 #endif
