@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi_spec.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 22:27:19 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:39:32 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/19 18:37:03 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_spec.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_atoi_spec(void)
 {
-	size_t		i;
-	size_t		src_len;
-
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	while (src[i] != '\0' && i < dstsize - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_len);
+    assert(ft_atoi("123") == atoi("123"));
+    assert(ft_atoi("-456") == atoi("-456"));
+    assert(ft_atoi("0") == atoi("0"));
+    assert(ft_atoi("42 is the answer") == atoi("42 is the answer"));
+    assert(ft_atoi("   789") == atoi("   789"));
+    assert(ft_atoi("abc123") == atoi("abc123"));
+    
+    printf("ft_atoi test passed!\n");
 }

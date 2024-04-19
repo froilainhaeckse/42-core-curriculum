@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:27:26 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 18:38:06 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "stdio.h"
 # include "assert.h"
 # include "ctype.h"
+# include <stdlib.h>
 # include <bsd/string.h>
 
 void	ft_isalpha_spec(void);
@@ -39,6 +40,7 @@ void	ft_strncmp_spec(void);
 void	ft_memchr_spec(void);
 void	ft_memcmp_spec(void);
 void	ft_strnstr_spec(void);
+void	ft_atoi_spec(void);
 
 
 #endif
