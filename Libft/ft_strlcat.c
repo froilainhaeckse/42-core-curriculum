@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:27:19 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 23:31:16 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 23:52:07 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	total_len;
 	size_t	i;
 
-	dst_len = ft_strlen((char *) dst);
-	src_len = ft_strlen((char *) src);
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	total_len = dst_len + src_len;
 	i = 0;
 	if (size <= dst_len)
