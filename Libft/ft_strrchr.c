@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 17:43:03 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/19 17:57:06 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_spec.h"
+#include "libft.h"
 
-int	main(void)
+char	*ft_strrchr(const char *s, int c)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
-	ft_memmove_spec();
-	ft_strlcpy_spec();
-	ft_strlcat_spec();
-	ft_toupper_spec();
-	ft_tolower_spec();
-	ft_strchr_spec();
-	ft_strrchr_spec();
+	const char	*last;
 
-
-
-	return (0);
+	last = NULL;
+	while (*s)
+	{
+		if (*s == c)
+		{
+			last = s;
+		}
+		s++;
+	}
+	if ((char)c == '\0')
+		return ((char *)s);
+	if (last != NULL)
+		return ((char *)last);
+	return (NULL);
 }
