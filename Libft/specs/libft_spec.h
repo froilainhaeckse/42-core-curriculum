@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:38:06 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 23:40:59 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,14 @@
 # include "assert.h"
 # include "ctype.h"
 # include <stdlib.h>
-# include <bsd/string.h>
+
+# ifdef __APPLE__
+// Include macOS-specific headers
+#  include <string.h>
+# else
+// Include Linux-specific headers
+#  include <bsd/string.h>
+# endif
 
 void	ft_isalpha_spec(void);
 void	ft_isdigit_spec(void);

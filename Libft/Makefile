@@ -6,13 +6,21 @@
 #    By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/17 12:41:53 by tkupler           #+#    #+#              #
-#    Updated: 2024/04/19 15:10:14 by tkupler          ###   ########.fr        #
+#    Updated: 2024/04/19 23:44:11 by tkupler          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
+
+# Determine the operating system
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Linux)
+    # Linux-specific flags and libraries
+    LDLIBS += -lbsd
+endif
 
 # TO DO: REMOVE wildcard function
 SRC = $(wildcard *.c)
@@ -30,7 +38,7 @@ $(NAME): $(OBJ)
 	ar rcs $@ $^
 
 $(TEST_EXEC): $(TEST_OBJ) $(NAME)
-	cc $(CFLAGS) -o $@ $^ -lbsd
+	cc $(CFLAGS) -o $@ $^ $(LDLIBS)
 	./$(TEST_EXEC) | cat
 
 all: $(NAME)
