@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_strnstr_spec.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:27:40 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/19 18:29:02 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_spec.h"
 
-int	main(void)
+void	ft_strnstr_spec(void)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
-	ft_memmove_spec();
-	ft_strlcpy_spec();
-	ft_strlcat_spec();
-	ft_toupper_spec();
-	ft_tolower_spec();
-	ft_strchr_spec();
-	ft_strrchr_spec();
-	ft_strncmp_spec();
-	ft_memchr_spec();
-	ft_memcmp_spec();
-	ft_strnstr_spec();
+    const char haystack[] = "Hello, world!";
+    const char *needle = "world";
+    const char *result = ft_strnstr(haystack, needle, sizeof(haystack));
 
+    assert(result == strnstr(haystack, needle, sizeof(haystack)));
 
-	return (0);
+    printf("ft_strnstr test passed!\n");
 }
+
