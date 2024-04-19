@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 17:24:25 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 17:41:18 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	ft_strlcpy_spec(void);
 void	ft_strlcat_spec(void);
 void	ft_toupper_spec(void);
 void	ft_tolower_spec(void);
+void	ft_strchr_spec(void);
 
 
 #endif

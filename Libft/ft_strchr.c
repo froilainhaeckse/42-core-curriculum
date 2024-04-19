@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset_spec.c                                   :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 11:39:40 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 17:40:36 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/19 17:34:51 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_spec.h"
+#include "libft.h"
 
-void	ft_memset_spec(void)
+char	*ft_strchr(const char *s, int c)
 {
-	char	str1[10];
-	char	str2[10];
-	size_t		i;
-	size_t		len;
-
-	len = 5;
-	i = 0;
-	ft_memset(str1, 'A', len);
-	memset(str2, 'A', len);
-
-	while (i < len)
+	while (*s)
 	{
-		assert(str1[i] == str2[i]);
-		i++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	printf("ft_memset test passed!\n");
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }

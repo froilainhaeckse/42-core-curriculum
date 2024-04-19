@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:28:59 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 23:24:18 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 17:39:57 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_strlcpy_spec(void)
 
     assert(ft_strlcpy(dest, "hello, world!", 6) == strlen("hello, world!") && strcmp(dest, "hello") == 0);
 
-    printf("ft_strlcpy tests passed!\n");
+    printf("ft_strlcpy test passed!\n");
 }

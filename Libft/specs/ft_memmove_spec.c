@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:04:03 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 14:33:16 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 17:40:16 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ void	ft_memmove_spec(void)
         assert(ft_memmove(s + 2, s, strlen(s) - 2) == s + 2 && memcmp(s, "HeHello, World!", strlen(s)) == 0);
     }
 
-    printf("ft_memmove tests passed!\n");
+    printf("ft_memmove test passed!\n");
 }

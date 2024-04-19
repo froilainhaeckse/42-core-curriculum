@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 22:28:59 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 15:50:49 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 17:40:04 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_strlcat_spec(void)
 
     assert(ft_strlcat(dest, src, 14) == strlen("hello, world!") && strcmp(dest, "hello, world!") == 0);
 
-    // assert(strlcat(dest, ", worldwide!", 18) == strlen("hello, worldwide!") && strcmp(dest, "hello, worldwide!") == 0);
+    // TO DO: assert(strlcat(dest, ", worldwide!", 18) == strlen("hello, worldwide!") && strcmp(dest, "hello, worldwide!") == 0);
 
-    printf("ft_strlcat tests passed!\n");
+    printf("ft_strlcat test passed!\n");
 }
