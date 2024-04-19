@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp_spec.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:05:41 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/19 18:08:12 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_spec.h"
 
-int	main(void)
+void	ft_strncmp_spec(void)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
-	ft_memmove_spec();
-	ft_strlcpy_spec();
-	ft_strlcat_spec();
-	ft_toupper_spec();
-	ft_tolower_spec();
-	ft_strchr_spec();
-	ft_strrchr_spec();
-	ft_strncmp_spec();
+	char str1[] = "Hello, world!";
+	char str2[] = "Hello, everyone!";
+	char str3[] = "Hello, world!";
 
+	assert(ft_strncmp(str1, str2, 6) == strncmp(str1, str2, 6));
+	assert(ft_strncmp(str1, str2, 8) == strncmp(str1, str2, 8));
+	assert(ft_strncmp(str1, str2, 12) == strncmp(str1, str2, 12));
+	assert(ft_strncmp(str1, str3, 13) == strncmp(str1, str3, 13));
 
-
-	return (0);
+	printf("ft_strncmp test passed!\n");
 }
