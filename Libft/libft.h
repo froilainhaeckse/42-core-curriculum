@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:43:18 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:17:23 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 18:23:44 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
-
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   spec_driver.c                                      :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 18:18:56 by tkupler          ###   ########.fr       */
+/*   Created: 2024/04/18 12:17:38 by tkupler           #+#    #+#             */
+/*   Updated: 2024/04/19 18:23:31 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_spec.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	ft_isalpha_spec();
-	ft_isdigit_spec();
-	ft_isalnum_spec();
-	ft_isascii_spec();
-	ft_isprint_spec();
-	ft_strlen_spec();
-	ft_memset_spec();
-	ft_bzero_spec();
-	ft_memcpy_spec();
-	ft_memmove_spec();
-	ft_strlcpy_spec();
-	ft_strlcat_spec();
-	ft_toupper_spec();
-	ft_tolower_spec();
-	ft_strchr_spec();
-	ft_strrchr_spec();
-	ft_strncmp_spec();
-	ft_memchr_spec();
-	ft_memcmp_spec();
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
-
-
+	p1 = s1;
+	p2 = s2;
+	while (n--)
+	{
+		if (*p1 != *p2)
+			return (*p1 - *p2);
+		p1++;
+		p2++;
+	}
 	return (0);
 }
