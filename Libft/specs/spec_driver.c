@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 14:32:50 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 14:41:12 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(void)
 	ft_memcpy_spec();
 	ft_memmove_spec();
 	ft_strlcpy_spec();
+	ft_strlcat_spec();
+
 
 
 	return (0);

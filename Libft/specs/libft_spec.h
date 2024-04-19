@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 14:32:42 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/19 15:02:35 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "stdio.h"
 # include "assert.h"
 # include "ctype.h"
-# include "string.h"
+# include <bsd/string.h>
 
 void	ft_isalpha_spec(void);
 void	ft_isdigit_spec(void);
@@ -30,6 +30,8 @@ void	ft_bzero_spec(void);
 void	ft_memcpy_spec(void);
 void	ft_memmove_spec(void);
 void	ft_strlcpy_spec(void);
+void	ft_strlcat_spec(void);
+
 
 
 #endif
