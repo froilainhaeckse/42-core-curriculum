@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:17:38 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 13:43:57 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/18 21:57:21 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	char	*d;
-	const char *s;
-	size_t i;
+	char		*d;
+	const char	*s;
+	size_t		i;
 
 	i = 0;
 	s = src;
@@ -26,6 +26,5 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 		d[i] = s[i];
 		i++;
 	}
-
-	return dest;
+	return (dest);
 }
