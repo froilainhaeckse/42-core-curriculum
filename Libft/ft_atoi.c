@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/29 18:55:22 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/04/29 19:20:02 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,34 @@ int	ft_isdigit(char c)
 	return (c >= '0' && c <= '9');
 }
 
+int	handle_sign(const char *str, int i)
+{
+	if (str[i] == '-')
+		return (-1);
+	else
+		return (1);
+	i++;
+	if (str[i] == '-' || str[i] == '+')
+		return (0);
+}
+
 int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	result;
-	int	sign_counter;
 	int	i;
 
 	sign = 1;
-	sign_counter = 0;
 	i = 0;
 	result = 0;
 	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
+		sign = sign * handle_sign(str, i);
 		i++;
 	}
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		sign_counter++;
-		i++;
-	}
-	if (sign_counter > 1)
+	if (sign == 0)
 		return (0);
 	while (ft_isdigit(str[i]))
 	{
