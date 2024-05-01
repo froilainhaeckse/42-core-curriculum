@@ -6,20 +6,17 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/29 19:20:02 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/01 19:08:32 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isspace(char c)
 {
 	return (c == ' ' || c == '\t'
 		|| c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r');
-}
-
-int	ft_isdigit(char c)
-{
-	return (c >= '0' && c <= '9');
 }
 
 int	handle_sign(const char *str, int i)
