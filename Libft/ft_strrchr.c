@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/19 17:57:06 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/01 19:10:58 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last;
+	int	str_counter;
 
-	last = NULL;
-	while (*s)
+	str_counter = ft_strlen(s);
+	while (str_counter != -1)
 	{
-		if (*s == c)
-		{
-			last = s;
-		}
-		s++;
+		if (s[str_counter] == (char)c)
+			return ((char *)(s) + sizeof(char) * str_counter);
+		--str_counter;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	if (last != NULL)
-		return ((char *)last);
 	return (NULL);
 }
