@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:41:56 by tkupler           #+#    #+#             */
-/*   Updated: 2024/04/18 15:10:50 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/01 19:34:53 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_memcpy_spec(void)
 {
+	assert(ft_memcpy(((void *)0), ((void *)0), 3) == memcpy(((void *)0), ((void *)0), 3));
+	
 	char src[] = "Hello, world!";
 	char dest1[20];
 	char dest2[20];
