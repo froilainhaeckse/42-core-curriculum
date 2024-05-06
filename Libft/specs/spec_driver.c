@@ -35,6 +35,7 @@ int	main(void)
 	ft_memcmp_spec();
 	ft_strnstr_spec();
 	ft_atoi_spec();
+	ft_calloc_spec();
 
 
 	return (0);

@@ -48,6 +48,7 @@ void	ft_memchr_spec(void);
 void	ft_memcmp_spec(void);
 void	ft_strnstr_spec(void);
 void	ft_atoi_spec(void);
+void	ft_calloc_spec(void);
 
 
 #endif
