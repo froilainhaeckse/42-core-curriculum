@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:43:18 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/06 15:13:04 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/06 15:59:23 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start,
 size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
 
 #endif
