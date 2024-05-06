@@ -6,28 +6,29 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:41:56 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/01 19:34:53 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/06 13:05:17 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_spec.h"
 
 void	ft_memcpy_spec(void)
-{
-	assert(ft_memcpy(((void *)0), ((void *)0), 3) == memcpy(((void *)0), ((void *)0), 3));
-	
-	char src[] = "Hello, world!";
-	char dest1[20];
-	char dest2[20];
+{	
+    // Test 1: Copying data from source to destination
+    char src[] = "Hello";
+    char dest[6];
+    ft_memcpy(dest, src, 6);
+    assert(strcmp(dest, src) == 0);
 
-	ft_memcpy(dest1, src, strlen(src) + 1);
-	memcpy(dest2, src, strlen(src) + 1);
+	// Test 2: Copying data when source pointer is NULL
+    char *null_src = NULL;
+    char dest2[6];
+    ft_memcpy(dest2, null_src, 6);
+    assert(memcmp(dest2, "\0\0\0\0\0\0", sizeof(dest2)) == 0);
 
-	size_t i = 0;
-	while (src[i]) {
-		assert(dest1[i] == dest2[i]);
-		assert(dest1[i] == src[i]);
-		i++;
-	}
+    // Test 3: Copying data when destination pointer is NULL
+    char src3[] = "Hello";
+    char *null_dest = NULL;
+    assert(ft_memcpy(null_dest, src3, 6) == NULL);
 	printf("ft_memcpy test passed!\n");
 }
