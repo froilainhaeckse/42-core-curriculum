@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:57:44 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/06 16:26:43 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/08 16:16:27 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int	main(void)
 	ft_substr_spec();
 	ft_strjoin_spec();
 	ft_strtrim_spec();
+	ft_split_spec();
+
 
 
 
