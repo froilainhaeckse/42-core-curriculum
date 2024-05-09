@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:31:28 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/09 12:08:56 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/09 12:13:29 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 	size_t	word_len;
 	char	**word_list;
 
-	if (!s || !c)
+	if (!s || !c || c == '\0')
 		return (NULL);
 	words = ft_str_count(s, c);
 	word_list = malloc((words + 1) * sizeof(char *));
@@ -69,7 +69,12 @@ char	**ft_split(char const *s, char c)
 			word_len = ft_word_len(s, c);
 			word_list[i] = malloc((word_len + 1) * sizeof(char));
 			if (!word_list[i])
+			{
+				while (i > 0)
+					free(word_list[--i]);
+				free(word_list);
 				return (NULL);
+			}
 			ft_strlcpy(word_list[i], s, word_len + 1);
 			i++;
 			s += word_len;
