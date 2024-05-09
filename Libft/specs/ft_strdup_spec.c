@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/06 12:46:36 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/09 10:00:35 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	ft_strdup_spec(void)
     assert(strlen(dup) == strlen(original));
 
     size_t i;
-    for (i = strlen(original) + 1; i < strlen(original) + 10; i++) {
+    for (i = strlen(original); dup[i] != '\0'; i++)
+    {
         assert(dup[i] == '\0');
     }
-
     free(dup);
 
     printf("ft_strdup test passed!\n");
