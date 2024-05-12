@@ -6,23 +6,51 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/09 13:45:44 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/12 17:05:30 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_spec.h"
 
+char ft_strmapi_toupper(unsigned int i, char c)
+{
+    (void)i;
+    if (c >= 'a' && c <= 'z')
+        return (c - 32);
+    return c;
+}
+
+char	ft_strmapi_tolower(unsigned int i, char c)
+{
+    (void)i;
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
+
 void ft_strmapi_spec(void)
 {
-    // char *result1 = ft_itoa(1);
-    // char *expected1 = "1";
-    // assert(strcmp(result1, expected1) == 0);
-    // free(result1);
+    char str1[] = "Hello, World!";
+    char *result;
 
-    // char *result2 = ft_itoa(2233);
-    // char *expected2 = "2233";
-    // assert(strcmp(result2, expected2) == 0);
-    // free(result2);
+    // Test 1: Convert to uppercase
+    result = ft_strmapi(str1, &ft_strmapi_toupper);
+    assert(strcmp(result, "HELLO, WORLD!") == 0);
+    free(result);
+
+    // Test 2: Convert to lowercase
+    result = ft_strmapi(str1, &ft_strmapi_tolower);
+    assert(strcmp(result, "hello, world!") == 0);
+    free(result);
+
+    // // Test 4: Empty string
+    // result = ft_strmapi("");
+    // assert(result != NULL && *result == '\0');
+    // free(result);
+
+    // // Test 5: NULL string
+    // result = ft_strmapi(NULL,NULL);
+    // assert(result == NULL);
 
     printf("ft_strmapi test passed!\n");
 }
