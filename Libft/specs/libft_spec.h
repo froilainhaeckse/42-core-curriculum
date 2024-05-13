@@ -56,6 +56,7 @@ void	ft_strtrim_spec(void);
 void	ft_split_spec(void);
 void	ft_itoa_spec(void);
 void	ft_strmapi_spec(void);
+void	ft_striteri_spec(void);
 
 
 

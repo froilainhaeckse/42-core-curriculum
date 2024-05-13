@@ -43,7 +43,7 @@ int	main(void)
 	ft_split_spec();
 	ft_itoa_spec();
 	ft_strmapi_spec();
-
+	ft_striteri_spec();
 
 
 
