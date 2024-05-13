@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/12 17:05:30 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/13 10:00:43 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,10 @@ void ft_strmapi_spec(void)
     assert(strcmp(result, "hello, world!") == 0);
     free(result);
 
-    // // Test 4: Empty string
-    // result = ft_strmapi("");
-    // assert(result != NULL && *result == '\0');
-    // free(result);
-
-    // // Test 5: NULL string
-    // result = ft_strmapi(NULL,NULL);
-    // assert(result == NULL);
+    // Test 4: Empty string
+    result = ft_strmapi("", &ft_strmapi_tolower); // Pass appropriate function pointer
+    assert(result != NULL && *result == '\0');
+    free(result);
 
     printf("ft_strmapi test passed!\n");
 }
