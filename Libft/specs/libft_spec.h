@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:38:37 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/12 15:45:12 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/13 10:15:12 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,10 @@ void	ft_split_spec(void);
 void	ft_itoa_spec(void);
 void	ft_strmapi_spec(void);
 void	ft_striteri_spec(void);
+void	ft_putchar_fd_spec(void);
+void	ft_putstr_fd_spec(void);
+void	ft_putendl_fd_spec(void);
+void	ft_putnbr_fd_spec(void);
 
 
 
