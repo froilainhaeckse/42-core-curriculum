@@ -6,7 +6,7 @@
 /*   By: tkupler <tkupler@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:22:30 by tkupler           #+#    #+#             */
-/*   Updated: 2024/05/09 11:12:44 by tkupler          ###   ########.fr       */
+/*   Updated: 2024/05/13 11:57:31 by tkupler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,6 @@ void ft_split_spec(void) {
     char **result4 = ft_split(string4, '*');
     split_cmp_array(expected4, result4);
     free(result4);
-
-    // TO DO: CHECK THIS AGAIN:
-    // char *string5 = "aa\0bbb";
-    // char **expected5 = ((char*[4]){"aa", "bbb", NULL});
-    // char **result5 = ft_split(string5, '\0');
-    // split_cmp_array(expected5, result5);
-    // free(result5);
 
     printf("ft_split test passed!\n");
 }
